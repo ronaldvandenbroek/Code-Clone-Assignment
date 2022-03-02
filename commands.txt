@@ -1,0 +1,8 @@
+run in this folder:
+docker build -t 2imp25-code-clones .
+docker run -it --rm -v "$PWD/out:/out" 2imp25-code-clones
+
+run in docker: 
+(can add params to jsinpect but they are also contained in manual-clones config file)
+(output results to the out folder)
+jsinspect > ../../out/test.log 
