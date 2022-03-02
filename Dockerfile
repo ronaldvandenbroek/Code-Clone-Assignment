@@ -31,7 +31,11 @@ RUN npm install -g ./jsinspect
 # prevents JsInspect from running into the GC issues. 
 ENV NODE_OPTIONS=--max-old-space-size=4000
 
-WORKDIR /usr/jquery-data
+WORKDIR /usr
+
+COPY manual-clones manual-clones
+
+WORKDIR /usr/manual-clones
 
 # Open a bash prompt, such that you can execute commands 
 # such as `cloc`. 
